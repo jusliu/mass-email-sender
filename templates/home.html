@@ -1,0 +1,45 @@
+{% extends "templates/base.html" %}
+{% block maincontent %}
+<div class='jumbotron topcolor' >
+
+</div>
+<div class='col-md-10 col-md-offset-1'>
+		<div class="row" style="margin-top:0px;margin-bottom:20px;">
+			<div class="col-md-10 col-md-offset-1 visible-lg text-center">
+				<h1 class='sheen' style='position:relative;font-size:70px;margin-top:90px;margin-bottom:0px;color:white;'><b><span></span>VCG Mass Email Sender</b></h1>
+			</div>
+			<div class="col-md-10 col-md-offset-1 visible-md text-center">
+				<h1 class='sheen'  style='position:relative;font-size:65px;margin-top:45px;margin-bottom:20px;color:white;'><b><span></span>VCG Mass Email Sender</b></h1>
+			</div>
+			<div class="col-sm-8 col-sm-offset-2 visible-sm text-center">
+				<h1 class='sheen'  style='font-size:48px;margin-top:45px;margin-bottom:20px;color:white;'><b><span></span>VCG Mass Email Sender</b></h1>
+			</div>
+			<div class="col-xs-12 visible-xs text-center">
+				<h1 class='sheen'  style='font-size:34px;margin-top:30px;margin-bottom:0px;color:white;'><b><span></span>VCG Mass Email Sender</b></h1>
+			</div>
+		</div>
+		<div class="row">
+			<form accept-charset='UTF-8' action="/results" method="post">
+				<div class="col-md-offset-2 col-md-4">
+					<textarea class="form-control" placeholder="Copy and paste your list of contact names here, directly from the spreadsheet. Be careful to ensure that the order matches exactly with contact emails ordering." rows="5" name="contact-names"></textarea>
+				</div>
+				<div class=" col-md-4" style="margin-bottom:24px">
+					<textarea class="form-control" placeholder="Copy and paste your list of contact emails here, directly from the spreadsheet. Be careful to ensure that the order matches exactly with contact names ordering." rows="5" name="contact-emails"></textarea>
+				</div>
+				<div class="col-md-offset-2 col-md-8" style="margin-bottom:24px">
+					<textarea class="form-control" placeholder="Your email's template goes here. Use %NAME% in place of where you would like the contact's name to go." rows="7" name="email-template"></textarea>
+				</div>
+
+				<div class="col-md-offset-2 col-md-5">
+					<input type="text" class="form-control" placeholder="Email Subject" name="email-subject">
+				</div>
+				<div class="col-md-2">
+					<input type="password" class="form-control" placeholder="Access Code" name="access-code">
+				</div>
+				<div class="col-md-1" style="padding-left: 14px">
+					<button type="submit" class="btn btn-block btn-success" id="locationsubmit">SEND</button>
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock %}

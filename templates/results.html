@@ -1,0 +1,32 @@
+{% extends "templates/base.html" %}
+{% block maincontent %}
+<div class='jumbotron topcolor'></div>
+<div class='jumbotron row results'>
+	<div class='col-md-10 col-md-offset-1'>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+			<p class='text-center' style="margin-bottom:20px;">The following emails were successfully sent:</p>
+			</div>
+		</div>
+		<div class="row">
+			<table class = "table table-bordered" style="background-color: rgba(0,0,0,0.6);">
+				<tr>
+					<td><b>EMAIL ADDRESS</b></td>
+					<td><b>EMAIL SUBJECT</b></td>
+					<td><b>EMAIL BODY</b></td>
+				</tr>
+				{% for email in emails %}
+				<tr>
+					<td>{{email.address}}</a></td>
+					<td>{{email.subject}}</a></td>
+					<td>{{email.body}}</a></td>
+				</tr>
+				{% endfor %}
+			</table>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+{% block addscripts %}
+{% endblock addscripts %}
